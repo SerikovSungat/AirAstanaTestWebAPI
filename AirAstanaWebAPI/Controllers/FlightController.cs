@@ -1,4 +1,4 @@
-﻿using AirAstanaWebAPI.Middlewares.ResourceFilter;
+using AirAstanaWebAPI.Middlewares.ResourceFilter;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Shared.Commands.Flight;
@@ -39,8 +39,8 @@ namespace AirAstanaWebAPI.Controllers
 	[SwaggerResponse(StatusCodes.Status200OK, "Коллекция рейсов.", typeof(FlightListDto))]
 	public async Task<IActionResult> GetItemsAsync([FromQuery] GetFlightsQuery query, CancellationToken cancellationToken)
 	{
-	  var result = await this.mediator.Send(query, cancellationToken);
-	  return this.Ok(result);
+	   var result = await this.mediator.Send(query, cancellationToken);
+	   return this.Ok(result);
 	}
 
 	/// <summary>
@@ -55,8 +55,8 @@ namespace AirAstanaWebAPI.Controllers
 	[SwaggerResponse(StatusCodes.Status201Created, "Рейс был создан.", typeof(FlightDto))]
 	public async Task<IActionResult> CreateAsync([FromBody] CreateFlightCommand command, CancellationToken cancellationToken)
 	{
-	   await this.mediator.Send(command, cancellationToken);
-	   return this.Created(string.Empty, null);
+	    await this.mediator.Send(command, cancellationToken);
+	    return this.Created(string.Empty, null);
 	}
 
 	/// <summary>
@@ -70,8 +70,8 @@ namespace AirAstanaWebAPI.Controllers
 	[SwaggerResponse(StatusCodes.Status200OK, "Рейс с указанным уникальным идентификатором был обновлен.", typeof(FlightDto))]
 	public async Task<IActionResult> ChangeAsync([FromBody] ChangeFlightCommand command, CancellationToken cancellationToken)
 	{
-	  await this.mediator.Send(command, cancellationToken);
-	  return this.Ok();
+	   await this.mediator.Send(command, cancellationToken);
+	   return this.Ok();
 	}
     }
 }
