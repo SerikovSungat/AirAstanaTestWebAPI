@@ -44,9 +44,9 @@ namespace AirAstanaWebAPI.Controllers
 	}
 
 	/// <summary>
-	/// Создание нового мерчанта (платежи в бюджет).
+	/// Создание нового рейса.
 	/// </summary>
-	/// <param name="command">Объект мерчанта (платежи в бюджет) для создания.</param>
+	/// <param name="command">Объект рейса для создания.</param>
 	/// <param name="cancellationToken">Маркер отмены, используемый для отмены HTTP-запроса.</param>
 	/// <returns></returns>
 	[HttpPost("create")]
@@ -60,9 +60,9 @@ namespace AirAstanaWebAPI.Controllers
 	}
 
 	/// <summary>
-	/// Обновление существующего мерчанта (платежи в бюджет) с указанным уникальным идентификатором.
+	/// Обновление существующего рейса с указанным уникальным идентификатором.
 	/// </summary>
-	/// <param name="command">Объект мерчанта (платежи в бюджет) для обновления.</param>
+	/// <param name="command">Объект рейса для обновления.</param>
 	/// <param name="cancellationToken">Маркер отмены, используемый для отмены HTTP-запроса.</param>
 	/// <returns></returns>
 	[HttpPost("change")]
