@@ -21,7 +21,7 @@ namespace Application.CommandHandlers.User
 		private readonly IUnitOfWork unitOfWork;
 		private readonly AuthenticationOptions appSettings;
 
-		public GetUserCommandHandler(IOptions<AuthenticationOptions> appSettings, IUnitOfWork unitOfWork, IMapper mapper)
+		public GetUserCommandHandler(IOptions<AuthenticationOptions> appSettings, IUnitOfWork unitOfWork)
 		{
 			this.unitOfWork = unitOfWork ?? throw new ArgumentNullException(nameof(unitOfWork));
 			this.appSettings = appSettings?.Value ?? throw new ArgumentNullException(nameof(appSettings));
