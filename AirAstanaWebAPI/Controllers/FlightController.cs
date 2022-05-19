@@ -10,9 +10,9 @@ using AuthorizeAttribute = AirAstanaWebAPI.Attributes.AuthorizeAttribute;
 namespace AirAstanaWebAPI.Controllers
 {
     /// <summary>
-	/// API контроллер для рейсов.
-	/// </summary>
-	[Route("/flight")]
+    /// API контроллер для рейсов.
+    /// </summary>
+    [Route("/flight")]
     [ApiController]
     [SwaggerTag("Рейсы.")]
     public class FlightController : ControllerBase
